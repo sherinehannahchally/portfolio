@@ -1,62 +1,80 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-// Import these for the animations to work
 import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
-  standalone: true, // This tells Angular it's a Standalone component
-  imports: [RouterOutlet, CommonModule], // Add any components/directives you use in HTML here
+  standalone: true,
+  imports: [RouterOutlet, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   animations: [
-    trigger('listAnimation', [
-      transition('* <=> *', [
-        query(':enter', [
-          style({ opacity: 0, transform: 'translateY(20px)' }),
-          stagger('100ms', [
-            animate('600ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
-          ])
-        ], { optional: true })
-      ])
-    ]),
-    trigger('fadeInUp', [
+    trigger('fadeIn', [
       transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(30px)' }),
-        animate('800ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
-      ])
-    ]),
-    trigger('fadeInLeft', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'translateX(-30px)' }),
-        animate('800ms ease-out', style({ opacity: 1, transform: 'translateX(0)' }))
-      ])
-    ]),
-    trigger('fadeInRight', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'translateX(30px)' }),
-        animate('800ms ease-out', style({ opacity: 1, transform: 'translateX(0)' }))
-      ])
-    ]),
-    trigger('scaleIn', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'scale(0.9)' }),
-        animate('600ms ease-out', style({ opacity: 1, transform: 'scale(1)' }))
-      ])
-    ]),
-    trigger('slideInStagger', [
-      transition('* <=> *', [
-        query(':enter', [
-          style({ opacity: 0, transform: 'translateX(-50px)' }),
-          stagger('150ms', [
-            animate('700ms ease-out', style({ opacity: 1, transform: 'translateX(0)' }))
-          ])
-        ], { optional: true })
+        style({ opacity: 0 }),
+        animate('500ms ease-in', style({ opacity: 1 }))
       ])
     ])
+    // ... keep your other existing animations here
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'portfolio';
+
+  // State for typed strings
+  typedWhoami = '';
+  typedCat = '';
+  typedLs = '';
+
+  // Visibility flags for responses
+  showWhoamiResp = false;
+  showCatResp = false;
+  showLsResp = false;
+  isComplete = false;
+
+  ngOnInit() {
+    this.startTerminalSession();
+  }
+
+  async startTerminalSession() {
+    // 1. Type "whoami"
+    await this.typeText('whoami', (v) => this.typedWhoami = v);
+    await this.delay(300);
+    this.showWhoamiResp = true;
+    await this.delay(600);
+
+    // 2. Type "cat stack_config.yaml"
+    await this.typeText('cat stack_config.yaml', (v) => this.typedCat = v);
+    await this.delay(300);
+    this.showCatResp = true;
+    await this.delay(600);
+
+    // 3. Type "ls ./active_projects"
+    await this.typeText('ls ./active_projects', (v) => this.typedLs = v);
+    await this.delay(300);
+    this.showLsResp = true;
+    
+    // 4. Finished
+    this.isComplete = true;
+  }
+
+  // Real character-by-character logic
+  private typeText(text: string, callback: (v: string) => void): Promise<void> {
+    return new Promise((resolve) => {
+      let i = 0;
+      const timer = setInterval(() => {
+        callback(text.substring(0, i + 1));
+        i++;
+        if (i === text.length) {
+          clearInterval(timer);
+          resolve();
+        }
+      }, 60); // Speed: 60ms per character
+    });
+  }
+
+  private delay(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
 }
