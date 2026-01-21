@@ -1,6 +1,10 @@
 <div class="min-h-screen bg-space-dark text-white font-sans overflow-x-hidden relative">
   
-  <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+  <!-- Three.js Canvas - Interactive 3D Background -->
+  <canvas #threeCanvas class="fixed inset-0 z-0 pointer-events-none"></canvas>
+  
+  <!-- Organic blobs background -->
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
     <div class="absolute inset-0">
       <div class="organic-blob blob-1"></div>
       <div class="organic-blob blob-2"></div>
@@ -27,7 +31,7 @@
     </svg>
   </div>
   
-  <div class="fixed top-0 right-0 w-[400px] h-full bg-gradient-to-l from-purple-500/20 via-pink-500/15 to-transparent blur-[80px] -z-10 animate-pulse-slow"></div>
+  <div class="fixed top-0 right-0 w-[400px] h-full bg-gradient-to-l from-purple-500/20 via-pink-500/15 to-transparent blur-[80px] z-0 animate-pulse-slow"></div>
 
   <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-space-dark/80 border-b border-white/10">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -51,7 +55,7 @@
     </nav>
   </header>
 
-<section id="home" class="pt-32 pb-20 px-6 min-h-screen flex items-center">
+<section id="home" class="pt-32 pb-20 px-6 min-h-screen flex items-center relative z-10">
     <div class="max-w-7xl mx-auto w-full">
       <div class="grid lg:grid-cols-12 gap-12 items-center">
         
@@ -59,9 +63,9 @@
           <div class="space-y-2">
             <p class="font-mono text-purple-400 text-sm mb-2">import {{ '{' }} Scalability, Security, ML {{ '}' }} from 'core-values';</p>
             <h1 class="text-5xl md:text-7xl font-bold">
-              Engineering <br/>
+              Sherine <br/>
               <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-500 bg-clip-text text-transparent">
-                Data Ecosystems
+                Chally
               </span>
             </h1>
           </div>
@@ -102,12 +106,7 @@
     </div>
     
     <div class="p-6 font-mono text-sm leading-relaxed">
-      <div>
-        <div class="text-green-400">$ <span class="text-white">{{ typedWhoami }}</span><span class="cursor" *ngIf="!showWhoamiResp">_</span></div>
-        <div class="text-gray-300 mt-2" *ngIf="showWhoamiResp" @fadeIn>
-          Sherine Hannah Chally | Data Engineering
-        </div>
-      </div>
+
       
       <div class="mt-6" *ngIf="showWhoamiResp">
         <div class="text-green-400">$ <span class="text-white">{{ typedCat }}</span><span class="cursor" *ngIf="!showCatResp">_</span></div>
@@ -144,6 +143,7 @@
     </div>
   </section>
 
+  <!-- Rest of your sections remain the same -->
   <section id="about" class="py-20 px-6 relative z-10">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
@@ -182,7 +182,7 @@
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <h3 class="text-xl font-bold mb-1">Software Engineer II</h3>
-              <p class="text-purple-400 font-mono text-sm">Morgan Stanley | Jan ‘24 - July ‘25</p>
+              <p class="text-purple-400 font-mono text-sm">Morgan Stanley | Jan '24 - July '25</p>
             </div>
             <div class="flex flex-wrap gap-2">
               <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Java</span>
@@ -201,7 +201,7 @@
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <h3 class="text-xl font-bold mb-1">Software Engineer I</h3>
-              <p class="text-purple-400 font-mono text-sm">Morgan Stanley | Jan ‘23 - Dec ‘23</p>
+              <p class="text-purple-400 font-mono text-sm">Morgan Stanley | Jan '23 - Dec '23</p>
             </div>
             <div class="flex flex-wrap gap-2">
               <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Angular</span>
@@ -219,7 +219,7 @@
             <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div>
                 <h3 class="text-xl font-bold mb-1">Technology Analyst</h3>
-                <p class="text-purple-400 font-mono text-sm">Morgan Stanley | Aug ‘22 - Dec ‘22</p>
+                <p class="text-purple-400 font-mono text-sm">Morgan Stanley | Aug '22 - Dec '22</p>
               </div>
               <div class="flex flex-wrap gap-2">
                 <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Python</span>
@@ -240,7 +240,7 @@
             <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div>
                 <h3 class="text-xl font-bold mb-1">Technology Spring Analyst Intern</h3>
-                <p class="text-purple-400 font-mono text-sm">Morgan Stanley | Jan ‘22 - July ‘22</p>
+                <p class="text-purple-400 font-mono text-sm">Morgan Stanley | Jan '22 - July '22</p>
               </div>
               <div class="flex flex-wrap gap-2">
               <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Angular</span>

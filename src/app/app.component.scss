@@ -535,13 +535,14 @@ section {
   }
 }
 
-a[href="#projects"],
+// a[href="#projects"],
+// a[href="#experience"],
 a[href="#contact"] {
   position: relative;
   overflow: hidden;
 }
 
-a[href="#projects"]:hover,
+// a[href="#projects"]:hover,
 a[href="#contact"]:hover {
   animation: buttonGlow 2s ease-in-out infinite;
 }
