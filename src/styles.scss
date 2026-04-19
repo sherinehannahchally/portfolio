@@ -14,12 +14,9 @@ html {
 
 body {
   margin: 0;
-  background-color: #fafaf9;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply bg-canvas-light text-neutral-800 antialiased transition-colors duration-500 dark:bg-canvas-dark dark:text-cream;
 }
 
 ::selection {
-  background: rgba(0, 0, 0, 0.08);
-  color: inherit;
+  @apply bg-brand/25 text-neutral-900 dark:bg-brand/35 dark:text-cream;
 }

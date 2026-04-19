@@ -1,206 +1,177 @@
-<div class="min-h-screen bg-[#fafaf9] text-neutral-900 antialiased">
-  <header class="sticky top-0 z-20 border-b border-neutral-200/80 bg-[#fafaf9]/90 backdrop-blur-sm">
-    <nav class="mx-auto flex max-w-3xl items-center justify-between gap-6 px-6 py-5">
-      <a href="#top" class="text-sm font-medium tracking-tight text-neutral-900">Sherine Chally</a>
-      <div class="flex flex-wrap items-center justify-end gap-x-6 gap-y-2 text-sm text-neutral-600">
-        <a href="#education" class="hover:text-neutral-900 transition-colors">Education</a>
-        <a href="#experience" class="hover:text-neutral-900 transition-colors">Experience</a>
-        <a href="#projects" class="hover:text-neutral-900 transition-colors">Projects</a>
-        <a
-          href="mailto:sherinechally&#64;gmail.com"
-          class="text-neutral-900 underline decoration-neutral-300 underline-offset-4 hover:decoration-neutral-900 transition-colors"
-          >Email</a
-        >
+<div
+  class="relative min-h-screen text-neutral-800 antialiased transition-colors duration-500 dark:text-cream"
+  [ngClass]="viewMode === 'garden' ? 'bg-canvas-light dark:bg-canvas-dark' : 'bg-transparent'"
+>
+  <div class="noise-layer" aria-hidden="true"></div>
+
+  @if (viewMode === 'garden') {
+    <header class="sticky top-0 z-20 border-b border-black/[0.06] bg-canvas-light/85 backdrop-blur-md dark:border-white/[0.07] dark:bg-canvas-dark/85">
+      <nav class="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-6 py-5">
+        <span class="text-sm font-medium tracking-tight text-neutral-900 dark:text-cream">Sherine Hannah Chally</span>
+        <div class="flex flex-wrap items-center justify-end gap-x-3 gap-y-2 text-sm text-neutral-600 dark:text-cream/75">
+          <button
+            type="button"
+            (click)="toggleTheme()"
+            [attr.aria-label]="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+            class="rounded-xl border border-black/[0.08] p-2 text-neutral-600 transition-colors hover:border-brand/35 hover:bg-brand/10 hover:text-brand dark:border-white/10 dark:text-cream/80 dark:hover:border-brand-soft/40 dark:hover:bg-brand/15 dark:hover:text-brand-soft"
+          >
+            @if (isDark) {
+              <i-lucide name="sun" [size]="18" class="text-amber-500" />
+            } @else {
+              <i-lucide name="moon" [size]="18" />
+            }
+          </button>
+          <a
+            href="mailto:sherinechally&#64;gmail.com"
+            class="inline-flex items-center gap-1 text-neutral-900 underline decoration-neutral-300 underline-offset-4 transition-colors hover:decoration-brand dark:text-cream dark:decoration-white/20 dark:hover:decoration-brand-soft"
+            ><i-lucide name="mail" [size]="14" class="text-brand dark:text-brand-soft" />Email</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <div class="garden-root relative z-10 overflow-visible px-4 pb-24 pt-6 md:px-8">
+      <p class="mb-2 text-center text-[10px] font-medium uppercase tracking-[0.35em] text-neutral-500 dark:text-cream/50">
+        Pick a bloom to explore
+      </p>
+      <section class="relative mx-auto mb-12 max-w-xl overflow-hidden rounded-[2rem] px-4 pb-10 pt-8 md:px-8 md:pt-12" aria-labelledby="intro-heading">
+        <div class="hero-backdrop">
+          <div class="hero-glow" aria-hidden="true"></div>
+          <div class="hero-veil" aria-hidden="true"></div>
+        </div>
+        <div class="relative z-10">
+          <h1 id="intro-heading" class="mb-5 text-center text-3xl font-light tracking-hero text-neutral-900 dark:text-cream md:text-4xl">
+            Sherine Hannah Chally
+          </h1>
+          <div class="mb-8 flex flex-wrap justify-center gap-2">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand/[0.07] px-3 py-1.5 text-xs font-medium text-brand dark:border-brand-soft/30 dark:bg-brand/15 dark:text-cream">
+              <i-lucide name="sparkles" [size]="14" class="shrink-0 text-brand dark:text-brand-soft" />
+              AI / ML
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-leaf/25 bg-leaf/10 px-3 py-1.5 text-xs font-medium text-leaf dark:border-leaf-soft/30 dark:bg-leaf/20 dark:text-cream">
+              <i-lucide name="shield" [size]="14" class="shrink-0 text-leaf dark:text-leaf-soft" />
+              Secure infrastructure
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-brand/[0.07] px-3 py-1.5 text-xs font-medium text-brand dark:border-brand-soft/30 dark:bg-brand/15 dark:text-cream">
+              <i-lucide name="laptop" [size]="14" class="shrink-0 text-brand dark:text-brand-soft" />
+              Software development
+            </span>
+          </div>
+          <div class="mb-8 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-neutral-600 dark:text-cream/75">
+            <a
+              href="mailto:sherinechally&#64;gmail.com"
+              class="inline-flex items-center gap-1.5 underline decoration-neutral-300 underline-offset-4 transition-colors hover:text-brand hover:decoration-brand dark:hover:text-brand-soft dark:hover:decoration-brand-soft"
+              ><i-lucide name="mail" [size]="15" class="text-brand dark:text-brand-soft" />sherinechally&#64;gmail.com</a
+            >
+            <span class="hidden text-neutral-300 dark:text-cream/25 sm:inline" aria-hidden="true">·</span>
+            <a
+              href="https://linkedin.com/in/sherine-chally-43396a178"
+              class="inline-flex items-center gap-1.5 transition-colors hover:text-brand dark:hover:text-brand-soft"
+              rel="noopener noreferrer"
+              ><i-lucide name="linkedin" [size]="15" class="text-brand dark:text-brand-soft" />LinkedIn</a
+            >
+            <span class="hidden text-neutral-300 dark:text-cream/25 sm:inline" aria-hidden="true">·</span>
+            <a
+              href="https://github.com/sherinehannahchally"
+              class="inline-flex items-center gap-1.5 transition-colors hover:text-brand dark:hover:text-brand-soft"
+              rel="noopener noreferrer"
+              ><i-lucide name="github" [size]="15" class="text-brand dark:text-brand-soft" />GitHub</a
+            >
+          </div>
+          <p class="mx-auto mb-6 max-w-xl text-center text-lg leading-relaxed text-neutral-600 dark:text-cream/85">
+            M.Eng Data Science student at UCLA. Former Software Engineer at Morgan Stanley, bringing together
+            <span class="font-medium text-neutral-900 dark:text-cream">software development</span>,
+            <span class="font-medium text-neutral-900 dark:text-cream">AI and machine learning</span>, and
+            <span class="font-medium text-neutral-900 dark:text-cream">data science</span> in both research and production settings.
+          </p>
+          <p class="mx-auto max-w-xl text-center text-base leading-relaxed text-neutral-600 dark:text-cream/80">
+            I work across <span class="font-medium text-brand dark:text-brand-soft">AI/ML</span>,
+            <span class="font-medium text-leaf dark:text-leaf-soft">secure infrastructure</span>, and
+            <span class="font-medium text-brand dark:text-brand-soft">software development</span>, from pipelines and databases to modeling and LLM systems, with hands-on experience in
+            <span class="font-medium text-neutral-900 dark:text-cream">PostgreSQL</span>,
+            <span class="font-medium text-neutral-900 dark:text-cream">PyTorch</span>, and
+            <span class="font-medium text-neutral-900 dark:text-cream">modern NLP / retrieval</span>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Flower garden: six unique buds -->
+      <div class="relative mx-auto max-w-2xl pb-8">
+        <div class="pointer-events-none absolute inset-0 -z-10 opacity-[0.35] dark:opacity-[0.2]" aria-hidden="true">
+          <div class="absolute left-[5%] top-[10%] h-16 w-16 rounded-full bg-brand/15 blur-xl"></div>
+          <div class="absolute right-[8%] top-[30%] h-12 w-12 rounded-full bg-leaf/20 blur-lg"></div>
+          <div class="absolute bottom-[15%] left-[12%] h-14 w-14 rounded-full bg-brand/10 blur-xl"></div>
+          <div class="absolute bottom-[8%] right-[15%] h-20 w-20 rounded-full bg-leaf/15 blur-2xl"></div>
+        </div>
+        <div class="grid grid-cols-3 gap-x-4 gap-y-10 sm:gap-x-10 sm:gap-y-12">
+          @for (f of flowers; track f.id) {
+            <div class="flex justify-center">
+              <app-garden-flower
+                [sectionId]="f.id"
+                [label]="f.label"
+                [accent]="f.accent"
+                [imageSrc]="f.imageSrc"
+                (pick)="onFlowerPick($event)"
+              />
+            </div>
+          }
+        </div>
       </div>
-    </nav>
-  </header>
+    </div>
 
-  <main id="top" class="mx-auto max-w-3xl px-6 pb-24 pt-16 md:pt-20">
-    <section class="mb-20 md:mb-28" aria-labelledby="intro-heading">
-      <p class="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-neutral-500">Portfolio</p>
-      <h1 id="intro-heading" class="mb-6 text-4xl font-semibold tracking-tight text-neutral-900 md:text-5xl">
-        Sherine Chally
-      </h1>
-      <p class="mb-8 max-w-xl text-lg leading-relaxed text-neutral-600">
-        M.Eng Data Science student at UCLA. Former Software Engineer at Morgan Stanley, focused on scalable data
-        systems, machine learning, and product-minded engineering.
-      </p>
-      <p class="max-w-xl text-base leading-relaxed text-neutral-600">
-        I work at the intersection of <span class="text-neutral-900">data infrastructure</span>,
-        <span class="text-neutral-900">ML</span>, and <span class="text-neutral-900">secure distributed systems</span>.
-        Interests include Snowflake, Databricks, and AWS.
-      </p>
-    </section>
+    <footer class="relative z-10 border-t border-neutral-200 py-8 dark:border-neutral-800">
+      <p class="text-center text-xs text-neutral-500 dark:text-neutral-400">© 2026 Sherine Hannah Chally · Los Angeles, CA</p>
+    </footer>
+  }
 
-    <section id="education" class="mb-20 scroll-mt-24 md:mb-28" aria-labelledby="education-heading">
-      <h2 id="education-heading" class="mb-8 border-b border-neutral-200 pb-2 text-xs font-semibold uppercase tracking-[0.15em] text-neutral-500">
-        Education
-      </h2>
-      <ul class="space-y-10">
-        <li>
-          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-            <h3 class="font-medium text-neutral-900">University of California, Los Angeles</h3>
-            <span class="shrink-0 text-sm text-neutral-500">Expected Dec 2026</span>
-          </div>
-          <p class="mt-1 text-sm text-neutral-600">M.Eng in Data Science</p>
-          <p class="mt-2 text-sm leading-relaxed text-neutral-500">
-            Coursework: Large-Scale Machine Learning, Big Data Analytics, Product Management
-          </p>
-        </li>
-        <li>
-          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-            <h3 class="font-medium text-neutral-900">SRM Institute of Science and Technology</h3>
-            <span class="shrink-0 text-sm text-neutral-500">B.Tech, Computer Science (Big Data Analytics)</span>
-          </div>
-          <p class="mt-1 text-sm text-neutral-600">GPA 3.88 / 4.00</p>
-          <p class="mt-2 text-sm leading-relaxed text-neutral-500">
-            Machine Learning, Data Structures, DBMS, Operating Systems
-          </p>
-        </li>
-      </ul>
-    </section>
+  @if (viewMode === 'section' && activeSection && activeFlower) {
+    <div
+      class="section-layer fixed inset-0 z-40 flex min-h-screen flex-col overflow-hidden transition-[background] duration-700"
+      [style.background]="isDark ? activeFlower.sectionBgDark : activeFlower.sectionBgLight"
+    >
+      @if (activeFlower) {
+        <div class="pointer-events-none absolute inset-0 z-[1] overflow-hidden" aria-hidden="true">
+          <img
+            class="absolute -right-[42vh] top-0 h-full w-auto max-w-none object-contain opacity-[0.32] dark:opacity-[0.36]"
+            [src]="activeFlower.imageSrc"
+            [alt]="activeFlower.label + ' background flower'"
+            aria-hidden="true"
+          />
+        </div>
+      }
 
-    <section id="experience" class="mb-20 scroll-mt-24 md:mb-28" aria-labelledby="experience-heading">
-      <h2 id="experience-heading" class="mb-8 border-b border-neutral-200 pb-2 text-xs font-semibold uppercase tracking-[0.15em] text-neutral-500">
-        Experience
-      </h2>
-      <ol class="relative space-y-12 border-l border-neutral-200 pl-6">
-        <li class="relative">
-          <span class="absolute -left-[25px] top-1.5 h-2 w-2 rounded-full bg-neutral-400" aria-hidden="true"></span>
-          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-            <h3 class="font-medium text-neutral-900">Software Engineer II</h3>
-            <span class="shrink-0 text-sm tabular-nums text-neutral-500">Jan 2024 – Jul 2025</span>
-          </div>
-          <p class="mt-0.5 text-sm text-neutral-600">Morgan Stanley</p>
-          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed text-neutral-600">
-            <li>Modernized legacy mainframe systems using APIs, Datalinks, and message queues for scalability.</li>
-            <li>Secured PostgreSQL with mutual TLS (mTLS), replacing Kerberos authentication.</li>
-          </ul>
-          <p class="mt-4 text-xs text-neutral-500">Java · PostgreSQL · Linux · Autosys</p>
-        </li>
-        <li class="relative">
-          <span class="absolute -left-[25px] top-1.5 h-2 w-2 rounded-full bg-neutral-300" aria-hidden="true"></span>
-          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-            <h3 class="font-medium text-neutral-900">Software Engineer I</h3>
-            <span class="shrink-0 text-sm tabular-nums text-neutral-500">Jan 2023 – Dec 2023</span>
-          </div>
-          <p class="mt-0.5 text-sm text-neutral-600">Morgan Stanley</p>
-          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed text-neutral-600">
-            <li>Led migration of web applications from Angular 8 to 16 and improved legacy code hygiene.</li>
-            <li>Data forecasting to support Prime Brokerage loan conversion workflows.</li>
-          </ul>
-          <p class="mt-4 text-xs text-neutral-500">Angular · Spring Boot · PostgreSQL</p>
-        </li>
-        <li class="relative">
-          <span class="absolute -left-[25px] top-1.5 h-2 w-2 rounded-full bg-neutral-300" aria-hidden="true"></span>
-          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-            <h3 class="font-medium text-neutral-900">Technology Analyst</h3>
-            <span class="shrink-0 text-sm tabular-nums text-neutral-500">Aug 2022 – Dec 2022</span>
-          </div>
-          <p class="mt-0.5 text-sm text-neutral-600">Morgan Stanley</p>
-          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed text-neutral-600">
-            <li>Built an interactive market data simulator with live visualizations.</li>
-            <li>Shipped a secure UI for Bitbucket automation and user authentication.</li>
-          </ul>
-          <p class="mt-4 text-xs text-neutral-500">Python · Java · JavaScript · C# · C · C++ · Scala</p>
-        </li>
-        <li class="relative">
-          <span class="absolute -left-[25px] top-1.5 h-2 w-2 rounded-full bg-neutral-300" aria-hidden="true"></span>
-          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-            <h3 class="font-medium text-neutral-900">Technology Spring Analyst Intern</h3>
-            <span class="shrink-0 text-sm tabular-nums text-neutral-500">Jan 2022 – Jul 2022</span>
-          </div>
-          <p class="mt-0.5 text-sm text-neutral-600">Morgan Stanley</p>
-          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed text-neutral-600">
-            <li>
-              Designed a secure web UI so business users could modify critical data without heavy IT dependency.
-            </li>
-          </ul>
-          <p class="mt-4 text-xs text-neutral-500">Angular · Java · PostgreSQL · Kerberos</p>
-        </li>
-      </ol>
-    </section>
+      <header class="relative z-20 border-b border-black/[0.08] bg-transparent backdrop-blur-sm dark:border-white/[0.1]">
+        <div class="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-4 px-6 py-4">
+          <button
+            type="button"
+            (click)="backToGarden()"
+            class="inline-flex items-center gap-2 rounded-full border border-black/[0.08] px-4 py-2 text-sm text-neutral-700 transition-colors hover:border-brand/40 hover:bg-brand/10 hover:text-brand dark:border-white/10 dark:text-cream/90 dark:hover:border-brand-soft/40 dark:hover:bg-brand/15 dark:hover:text-brand-soft"
+          >
+            <span aria-hidden="true">←</span> Home
+          </button>
+          <span class="text-sm font-medium tracking-tight text-neutral-900 dark:text-cream">Sherine Hannah Chally</span>
+          <button
+            type="button"
+            (click)="toggleTheme()"
+            [attr.aria-label]="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+            class="rounded-xl border border-black/[0.08] p-2 text-neutral-600 transition-colors hover:border-brand/35 hover:bg-brand/10 dark:border-white/10 dark:text-cream/80"
+          >
+            @if (isDark) {
+              <i-lucide name="sun" [size]="18" class="text-amber-500" />
+            } @else {
+              <i-lucide name="moon" [size]="18" />
+            }
+          </button>
+        </div>
+      </header>
 
-    <section id="projects" class="mb-20 scroll-mt-24 md:mb-28" aria-labelledby="projects-heading">
-      <h2 id="projects-heading" class="mb-8 border-b border-neutral-200 pb-2 text-xs font-semibold uppercase tracking-[0.15em] text-neutral-500">
-        Projects
-      </h2>
-      <ul class="divide-y divide-neutral-200">
-        <li class="py-8 first:pt-0">
-          <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
-            <h3 class="font-medium text-neutral-900">Reflective Hybrid RAG</h3>
-            <span class="shrink-0 text-xs text-neutral-500">GenAI · Search</span>
-          </div>
-          <p class="mt-3 text-sm leading-relaxed text-neutral-600">
-            Architecture with Gemini 2.5 Flash and Qdrant; combined dense and sparse (SPLADE) retrieval to improve
-            recommendation quality.
-          </p>
-          <p class="mt-3 text-xs text-neutral-500">Python · Qdrant · LLMs</p>
-        </li>
-        <li class="py-8">
-          <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
-            <h3 class="font-medium text-neutral-900">Neural Network Poisoning</h3>
-            <span class="shrink-0 text-xs text-neutral-500">Security · ML</span>
-          </div>
-          <p class="mt-3 text-sm leading-relaxed text-neutral-600">
-            Attacks on pruned networks in PyTorch; measured accuracy impact while preserving baseline behavior on
-            unpruned paths.
-          </p>
-          <p class="mt-3 text-xs text-neutral-500">PyTorch · CNNs · U-Net</p>
-        </li>
-        <li class="py-8">
-          <h3 class="font-medium text-neutral-900">Churn Behaviour Analysis</h3>
-          <p class="mt-3 text-sm leading-relaxed text-neutral-600">
-            Uplift modeling on ~13M payment records to find persuadable customers and reduce churn.
-          </p>
-          <p class="mt-3 text-xs text-neutral-500">Python · Uplift modeling</p>
-        </li>
-        <li class="py-8 pb-0">
-          <h3 class="font-medium text-neutral-900">Smart Security Door</h3>
-          <p class="mt-3 text-sm leading-relaxed text-neutral-600">
-            Lab access control using computer vision and encrypted tokens.
-          </p>
-          <p class="mt-3 text-xs text-neutral-500">Computer vision · AI</p>
-        </li>
-      </ul>
-    </section>
+      <main class="section-scroll-no-scrollbar relative z-10 mx-auto min-h-0 w-full max-w-3xl flex-1 overflow-y-auto px-6 pb-16 pt-10">
+        <app-portfolio-sections [section]="activeSection" />
+      </main>
 
-    <section class="border-t border-neutral-200 pt-12" aria-labelledby="contact-heading">
-      <h2 id="contact-heading" class="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-neutral-500">
-        Contact
-      </h2>
-      <p class="mb-6 text-sm leading-relaxed text-neutral-600">
-        Open to roles in data engineering, ML engineering, and product-minded technical work.
-      </p>
-      <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-        <a
-          href="mailto:sherinechally&#64;gmail.com"
-          class="text-neutral-900 underline decoration-neutral-300 underline-offset-4 hover:decoration-neutral-900"
-          >sherinechally&#64;gmail.com</a
-        >
-        <a
-          href="https://github.com/sherinehannahchally"
-          class="text-neutral-600 hover:text-neutral-900 transition-colors"
-          rel="noopener noreferrer"
-          >GitHub</a
-        >
-        <a
-          href="https://linkedin.com/in/sherine-chally-43396a178"
-          class="text-neutral-600 hover:text-neutral-900 transition-colors"
-          rel="noopener noreferrer"
-          >LinkedIn</a
-        >
-        <a
-          href="https://datascienceportfol.io/sherinechally"
-          class="text-neutral-600 hover:text-neutral-900 transition-colors"
-          rel="noopener noreferrer"
-          >Writing</a
-        >
-      </div>
-    </section>
-  </main>
-
-  <footer class="border-t border-neutral-200 py-8">
-    <p class="text-center text-xs text-neutral-500">© 2026 Sherine Chally · Los Angeles, CA</p>
-  </footer>
+      <footer class="relative z-20 border-t border-black/[0.08] bg-transparent py-6 backdrop-blur-sm dark:border-white/[0.1]">
+        <p class="text-center text-xs text-neutral-500 dark:text-neutral-400">© 2026 Sherine Hannah Chally · Los Angeles, CA</p>
+      </footer>
+    </div>
+  }
 </div>
