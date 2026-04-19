@@ -1,0 +1,307 @@
+<ng-container [ngSwitch]="section">
+    <section *ngSwitchCase="'education'" id="education" class="mb-20 scroll-mt-24 md:mb-28" aria-labelledby="education-heading">
+      <h2 id="education-heading" class="mb-8 flex items-center gap-2 border-b border-neutral-200 pb-2 text-xs font-semibold uppercase tracking-[0.15em] text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
+        <i-lucide name="graduation-cap" [size]="16" class="text-brand dark:text-brand-soft" />
+        Education
+      </h2>
+      <ul class="space-y-10">
+        <li>
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="font-medium text-neutral-900 dark:text-neutral-100">University of California, Los Angeles</h3>
+            <span class="shrink-0 text-sm text-neutral-500 dark:text-neutral-400">Los Angeles, CA · Expected Dec 2026</span>
+          </div>
+          <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-300">Master of Engineering (M.Eng) in Data Science</p>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-500 dark:text-neutral-400">
+            <span class="text-neutral-600 dark:text-neutral-300">Relevant coursework:</span> Large-Scale Machine Learning, Big Data Analytics,
+            Product Management, Natural Language Processing, Neural Networks and Deep Learning, Entrepreneurship for Engineers
+          </p>
+        </li>
+        <li>
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="font-medium text-neutral-900 dark:text-neutral-100">SRM Institute of Science and Technology</h3>
+            <span class="shrink-0 text-sm text-neutral-500 dark:text-neutral-400">Chennai, India · May 2022</span>
+          </div>
+          <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-300">
+            B.Tech in Computer Science and Engineering, specialization in Big Data Analytics
+          </p>
+          <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-300">GPA 3.88 / 4.00</p>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-500 dark:text-neutral-400">
+            <span class="text-neutral-600 dark:text-neutral-300">Relevant coursework:</span> Machine Learning, Data Science, Artificial
+            Intelligence, Data Structures and Algorithms, Operating Systems, Object-Oriented Programming, Database
+            Management Systems
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section *ngSwitchCase="'certifications'" id="certifications" class="mb-20 scroll-mt-24 md:mb-28" aria-labelledby="certifications-heading">
+      <h2 id="certifications-heading" class="mb-8 flex items-center gap-2 border-b border-neutral-200 pb-2 text-xs font-semibold uppercase tracking-[0.15em] text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
+        <i-lucide name="award" [size]="16" class="text-brand dark:text-brand-soft" />
+        Certifications
+      </h2>
+      <ul class="space-y-4">
+        <li class="text-sm text-neutral-700 dark:text-neutral-300">
+          <span class="font-medium text-neutral-900 dark:text-neutral-100">Snowflake SnowPro Associate</span>, Platform Certification
+          <span class="text-neutral-500 dark:text-neutral-400"> (Feb 2026)</span>
+        </li>
+      </ul>
+    </section>
+
+    <section *ngSwitchCase="'skills'" id="skills" class="mb-20 scroll-mt-24 md:mb-28" aria-labelledby="skills-heading">
+      <h2 id="skills-heading" class="mb-8 flex items-center gap-2 border-b border-neutral-200 pb-2 text-xs font-semibold uppercase tracking-[0.15em] text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
+        <i-lucide name="cpu" [size]="16" class="text-brand dark:text-brand-soft" />
+        Technical skills
+      </h2>
+      <dl class="space-y-6 text-sm">
+        <div>
+          <dt class="mb-1 font-medium text-neutral-900 dark:text-neutral-100">Languages &amp; scripting</dt>
+          <dd class="leading-relaxed text-neutral-600 dark:text-neutral-300">Python, SQL, Java, Scala, C++, C, TypeScript, JavaScript</dd>
+        </div>
+        <div>
+          <dt class="mb-1 font-medium text-neutral-900 dark:text-neutral-100">Data platforms &amp; warehousing</dt>
+          <dd class="leading-relaxed text-neutral-600 dark:text-neutral-300">Snowflake, Databricks, Apache Airflow, Apache Spark</dd>
+        </div>
+        <div>
+          <dt class="mb-1 font-medium text-neutral-900 dark:text-neutral-100">AI / ML &amp; LLM tooling</dt>
+          <dd class="leading-relaxed text-neutral-600 dark:text-neutral-300">
+            PyTorch, LangChain, Hugging Face Transformers, OpenAI API, FastAPI
+          </dd>
+        </div>
+        <div>
+          <dt class="mb-1 font-medium text-neutral-900 dark:text-neutral-100">Cloud &amp; databases</dt>
+          <dd class="leading-relaxed text-neutral-600 dark:text-neutral-300">PostgreSQL, Redis, Qdrant</dd>
+        </div>
+        <div>
+          <dt class="mb-1 font-medium text-neutral-900 dark:text-neutral-100">Tools &amp; DevOps</dt>
+          <dd class="leading-relaxed text-neutral-600 dark:text-neutral-300">
+            Git, Docker, GitHub Actions, Kubernetes, Terraform, CI/CD, Linux, Jira
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <section *ngSwitchCase="'experience'" id="experience" class="mb-20 scroll-mt-24 md:mb-28" aria-labelledby="experience-heading">
+      <h2 id="experience-heading" class="mb-8 flex items-center gap-2 border-b border-neutral-200 pb-2 text-xs font-semibold uppercase tracking-[0.15em] text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
+        <i-lucide name="briefcase" [size]="16" class="text-brand dark:text-brand-soft" />
+        Experience
+      </h2>
+      <ol class="relative space-y-12 border-l border-neutral-200 pl-6 dark:border-neutral-800">
+        <li class="relative">
+          <span class="absolute -left-[25px] top-1.5 h-2 w-2 rounded-full bg-brand dark:bg-brand-soft" aria-hidden="true"></span>
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="font-medium text-neutral-900 dark:text-neutral-100">Software Engineer II</h3>
+            <span class="shrink-0 text-sm tabular-nums text-neutral-500 dark:text-neutral-400">Jan 2024 – Jul 2025</span>
+          </div>
+          <p class="mt-0.5 text-sm text-neutral-600 dark:text-neutral-300">Morgan Stanley · Bangalore, India</p>
+          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            <li>
+              Modernized legacy mainframe systems by designing and implementing distributed jobs using APIs, Datalinks,
+              databases, and message queues, improving performance and scalability.
+            </li>
+            <li>
+              Created and managed certificates to secure PostgreSQL with mutual TLS (mTLS), replacing Kerberos and
+              ensuring secured client–server communication.
+            </li>
+          </ul>
+          <p class="mt-4 text-xs text-neutral-500 dark:text-neutral-400">Java · Linux · Autosys · PostgreSQL</p>
+        </li>
+        <li class="relative">
+          <span class="absolute -left-[25px] top-1.5 h-2 w-2 rounded-full bg-neutral-300 dark:bg-neutral-600" aria-hidden="true"></span>
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="font-medium text-neutral-900 dark:text-neutral-100">Software Engineer I</h3>
+            <span class="shrink-0 text-sm tabular-nums text-neutral-500 dark:text-neutral-400">Jan 2023 – Dec 2023</span>
+          </div>
+          <p class="mt-0.5 text-sm text-neutral-600 dark:text-neutral-300">Morgan Stanley · Bangalore, India</p>
+          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            <li>
+              Led migration of a web application from Angular 8 to Angular 16, resolving deprecated APIs and obsolete
+              libraries; transferred knowledge to the team on practices for long-term scalability.
+            </li>
+          </ul>
+          <p class="mt-4 text-xs text-neutral-500 dark:text-neutral-400">Angular · Spring Boot · PostgreSQL</p>
+        </li>
+        <li class="relative">
+          <span class="absolute -left-[25px] top-1.5 h-2 w-2 rounded-full bg-neutral-300 dark:bg-neutral-600" aria-hidden="true"></span>
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="font-medium text-neutral-900 dark:text-neutral-100">Technology Analyst</h3>
+            <span class="shrink-0 text-sm tabular-nums text-neutral-500 dark:text-neutral-400">Aug 2022 – Dec 2022</span>
+          </div>
+          <p class="mt-0.5 text-sm text-neutral-600 dark:text-neutral-300">Morgan Stanley · Bangalore, India</p>
+          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            <li>
+              Developed an interactive platform simulating real-time market data with live visualizations so users could
+              analyze trends, manage portfolios, and support trading decisions.
+            </li>
+            <li>
+              Built a secure UI for IT teams to edit and update Bitbucket files from a dashboard, automating Git
+              operations with authentication and file validation.
+            </li>
+          </ul>
+          <p class="mt-4 text-xs text-neutral-500 dark:text-neutral-400">C · C++ · Java · Scala · Python · C# · JavaScript</p>
+        </li>
+        <li class="relative">
+          <span class="absolute -left-[25px] top-1.5 h-2 w-2 rounded-full bg-neutral-300 dark:bg-neutral-600" aria-hidden="true"></span>
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="font-medium text-neutral-900 dark:text-neutral-100">Technology Spring Analyst Intern</h3>
+            <span class="shrink-0 text-sm tabular-nums text-neutral-500 dark:text-neutral-400">Jan 2022 – Jul 2022</span>
+          </div>
+          <p class="mt-0.5 text-sm text-neutral-600 dark:text-neutral-300">Morgan Stanley · Bangalore, India</p>
+          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            <li>
+              Designed and developed a secure web UI for business users to modify critical data quickly and without
+              heavy IT dependency.
+            </li>
+          </ul>
+          <p class="mt-4 text-xs text-neutral-500 dark:text-neutral-400">Angular · Java · PostgreSQL · Kerberos</p>
+        </li>
+      </ol>
+    </section>
+
+    <section *ngSwitchCase="'projects'" id="projects" class="mb-20 scroll-mt-24 md:mb-28" aria-labelledby="projects-heading">
+      <h2 id="projects-heading" class="mb-8 flex items-center gap-2 border-b border-neutral-200 pb-2 text-xs font-semibold uppercase tracking-[0.15em] text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
+        <i-lucide name="folder-kanban" [size]="16" class="text-brand dark:text-brand-soft" />
+        Projects
+      </h2>
+      <ul class="divide-y divide-neutral-200 dark:divide-neutral-800">
+        <li class="py-10 first:pt-0">
+          <h3 class="text-base font-medium leading-snug text-neutral-900 dark:text-neutral-100">
+            Context-Aware Content Moderation for Hate Speech Detection
+          </h3>
+          <p class="mt-2 text-xs text-neutral-500 dark:text-neutral-400">Python · LLMs · BERT · Llama · NLP</p>
+          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            <li>
+              Designed a dual-model inference-time content moderation framework pairing a conversational chatbot with a
+              dedicated safety supervisor that evaluates each user message within full conversation history, enabling
+              detection of gradually escalating harmful content that single-turn classifiers miss.
+            </li>
+            <li>
+              Implemented four supervisor variants (Zero-Shot 1B, Multi-Shot 1B, Zero-Shot 8B Llama, fine-tuned HateBERT)
+              evaluated on 400 synthetic multi-turn conversations (7,494 turns) generated via an obliterated Llama-3.3-8B
+              model.
+            </li>
+            <li>
+              Engineered dual conversation history architecture (<code class="rounded bg-neutral-100 px-1 text-[0.8rem] text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200">chat_history</code> and
+              <code class="rounded bg-neutral-100 px-1 text-[0.8rem] text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200">supervisor_history</code>) to prevent chatbot exposure to harmful content while enabling the supervisor to track
+              escalation patterns across the full conversational trajectory.
+            </li>
+            <li>
+              Multi-shot 1B supervisor achieved best practical balance (F1: 0.717, 85% recall, 38% early detection rate);
+              HateBERT showed highest precision (0.905) but was 2.4× more susceptible to adversarial bypass than LLM-based
+              supervisors.
+            </li>
+          </ul>
+        </li>
+        <li class="py-10">
+          <h3 class="text-base font-medium leading-snug text-neutral-900 dark:text-neutral-100">
+            Keystroke Decoding from Surface EMG Signals via Hybrid Deep Learning
+          </h3>
+          <p class="mt-2 text-xs text-neutral-500 dark:text-neutral-400">Python · PyTorch · CNN · BiLSTM · CTC Loss · sEMG</p>
+          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            <li>
+              Implemented a CNN+BiLSTM hybrid encoder for decoding QWERTY keystrokes from surface electromyography (sEMG)
+              signals using the emg2qwerty dataset, achieving the best test Character Error Rate (CER) of 14.96% among four
+              evaluated architectures.
+            </li>
+            <li>
+              Architecture combined 3 stacked 1D temporal convolutions (256 channels, kernel size 3) for local feature
+              extraction with 2 bidirectional LSTM layers (256 units per direction) for long-range sequence modeling,
+              trained end-to-end with CTC loss.
+            </li>
+            <li>
+              Outperformed the TDS convolutional baseline (23.80% CER) and a plain bidirectional GRU (17.33% CER),
+              demonstrating that combining local feature extraction with bidirectional recurrence is more effective than
+              either mechanism alone.
+            </li>
+          </ul>
+        </li>
+        <li class="py-10">
+          <h3 class="text-base font-medium leading-snug text-neutral-900 dark:text-neutral-100">Data Poisoning Attacks on Pruned Neural Networks</h3>
+          <p class="mt-2 text-xs text-neutral-500 dark:text-neutral-400">Python · PyTorch · CNNs · U-Net · Model pruning</p>
+          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            <li>
+              Designed clean-label data poisoning attacks using Python and PyTorch that remain benign in dense neural
+              networks but activate backdoors after unstructured pruning.
+            </li>
+            <li>
+              Developed U-Net poison generator using alternating optimization and proposed Ambiguous Label Poisoning
+              Strategy to select boundary-adjacent samples via class probability ambiguity.
+            </li>
+            <li>
+              Achieved up to 12% accuracy degradation in pruned models (60% L1 pruning) on MNIST and CIFAR-10 while
+              preserving unpruned performance, demonstrating security vulnerabilities in compressed models.
+            </li>
+          </ul>
+        </li>
+        <li class="py-10">
+          <h3 class="text-base font-medium leading-snug text-neutral-900 dark:text-neutral-100">Reflective Hybrid RAG for Recommendation</h3>
+          <p class="mt-2 text-xs text-neutral-500 dark:text-neutral-400">Python · LLMs · RAG · Qdrant · SPLADE</p>
+          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            <li>
+              Designed a Reflective Hybrid RAG architecture to address context fragmentation in LLM-based recommendation
+              systems, separating historical facts from synthesized user insights.
+            </li>
+            <li>
+              Implemented a Sidecar Reflection Layer using Gemini 1.5 Flash to convert noisy interaction logs into
+              high-level taste profiles, enabling intent inference beyond pattern-matching.
+            </li>
+            <li>
+              Engineered hybrid search combining dense embeddings (Google text-embedding-004) and sparse lexical vectors
+              (SPLADE) stored in Qdrant, merging results via Reciprocal Rank Fusion; achieved 3× improvement in Hit Rate at
+              1 (37.50%) vs. baseline LLM recommenders.
+            </li>
+          </ul>
+        </li>
+        <li class="py-10 pb-0">
+          <h3 class="text-base font-medium leading-snug text-neutral-900 dark:text-neutral-100">
+            Predicting Customer Payment Behaviour Using Machine Learning
+          </h3>
+          <p class="mt-2 text-xs text-neutral-500 dark:text-neutral-400">Python · Machine learning · Uplift modeling</p>
+          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+            <li>
+              Applied machine learning to identify customers likely to churn and develop data-driven retention strategies
+              without risking existing customer relationships.
+            </li>
+            <li>
+              Developed uplift modeling to distinguish persuadable customers from lost causes, focusing on both churn
+              prediction and prevention through targeted intervention strategies.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section *ngSwitchCase="'contact'" id="contact" class="border-t border-neutral-200 pt-12 dark:border-neutral-800" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">
+        <i-lucide name="mail" [size]="16" class="text-brand dark:text-brand-soft" />
+        Contact
+      </h2>
+      <p class="mb-6 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+        Open to roles in data engineering, ML engineering, product management, and product-minded technical work.
+      </p>
+      <div class="flex flex-wrap gap-x-6 gap-y-3 text-sm">
+        <a
+          href="mailto:sherinechally&#64;gmail.com"
+          class="inline-flex items-center gap-1.5 text-neutral-900 underline decoration-neutral-300 underline-offset-4 transition-colors hover:decoration-brand dark:text-neutral-100 dark:decoration-neutral-600 dark:hover:decoration-brand-soft"
+          ><i-lucide name="mail" [size]="15" class="text-brand dark:text-brand-soft" />sherinechally&#64;gmail.com</a
+        >
+        <a
+          href="https://github.com/sherinehannahchally"
+          class="inline-flex items-center gap-1.5 text-neutral-600 transition-colors hover:text-brand dark:text-neutral-400 dark:hover:text-brand-soft"
+          rel="noopener noreferrer"
+          ><i-lucide name="github" [size]="15" class="text-brand dark:text-brand-soft" />GitHub</a
+        >
+        <a
+          href="https://linkedin.com/in/sherine-chally-43396a178"
+          class="inline-flex items-center gap-1.5 text-neutral-600 transition-colors hover:text-brand dark:text-neutral-400 dark:hover:text-brand-soft"
+          rel="noopener noreferrer"
+          ><i-lucide name="linkedin" [size]="15" class="text-brand dark:text-brand-soft" />LinkedIn</a
+        >
+        <a
+          href="https://datascienceportfol.io/sherinechally"
+          class="inline-flex items-center gap-1.5 text-neutral-600 transition-colors hover:text-brand dark:text-neutral-400 dark:hover:text-brand-soft"
+          rel="noopener noreferrer"
+          ><i-lucide name="pen-line" [size]="15" class="text-brand dark:text-brand-soft" />Writing</a
+        >
+      </div>
+    </section>
+</ng-container>
