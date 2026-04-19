@@ -20,10 +20,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('portfolio');
   });
 
-  it('should render title', () => {
+  it('should render name in heading', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, portfolio');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Sherine Chally');
   });
 });
