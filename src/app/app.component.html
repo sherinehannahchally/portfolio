@@ -1,339 +1,206 @@
-<div class="min-h-screen bg-space-dark text-white font-sans overflow-x-hidden relative">
-  
-  <!-- Three.js Canvas - Interactive 3D Background -->
-  <canvas #threeCanvas class="fixed inset-0 z-0 pointer-events-none"></canvas>
-  
-  <!-- Organic blobs background -->
-  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-    <div class="absolute inset-0">
-      <div class="organic-blob blob-1"></div>
-      <div class="organic-blob blob-2"></div>
-      <div class="organic-blob blob-3"></div>
-      <div class="organic-blob blob-4"></div>
-      <div class="organic-blob blob-5"></div>
-    </div>
-    
-    <svg class="absolute inset-0 w-full h-full" style="opacity: 0.4;">
-      <line x1="0" y1="20%" x2="100%" y2="20%" stroke="url(#purpleGradient)" stroke-width="1" class="neon-line" />
-      <line x1="0" y1="40%" x2="100%" y2="40%" stroke="url(#purpleGradient)" stroke-width="1" class="neon-line" />
-      <line x1="0" y1="60%" x2="100%" y2="60%" stroke="url(#purpleGradient)" stroke-width="1" class="neon-line" />
-      <line x1="0" y1="80%" x2="100%" y2="80%" stroke="url(#purpleGradient)" stroke-width="1" class="neon-line" />
-      <line x1="20%" y1="0" x2="20%" y2="100%" stroke="url(#purpleGradient)" stroke-width="1" class="neon-line" />
-      <line x1="50%" y1="0" x2="50%" y2="100%" stroke="url(#purpleGradient)" stroke-width="1" class="neon-line" />
-      <line x1="80%" y1="0" x2="80%" y2="100%" stroke="url(#purpleGradient)" stroke-width="1" class="neon-line" />
-      <defs>
-        <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0.6" />
-          <stop offset="50%" style="stop-color:#ec4899;stop-opacity:0.8" />
-          <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0.6" />
-        </linearGradient>
-      </defs>
-    </svg>
-  </div>
-  
-  <div class="fixed top-0 right-0 w-[400px] h-full bg-gradient-to-l from-purple-500/20 via-pink-500/15 to-transparent blur-[80px] z-0 animate-pulse-slow"></div>
-
-  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-space-dark/80 border-b border-white/10">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center font-bold text-xl font-mono">
-          <span class="text-white">&lt;/&gt;</span>
-        </div>
-        <span class="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-mono">shchally.dev</span>
+<div class="min-h-screen bg-[#fafaf9] text-neutral-900 antialiased">
+  <header class="sticky top-0 z-20 border-b border-neutral-200/80 bg-[#fafaf9]/90 backdrop-blur-sm">
+    <nav class="mx-auto flex max-w-3xl items-center justify-between gap-6 px-6 py-5">
+      <a href="#top" class="text-sm font-medium tracking-tight text-neutral-900">Sherine Chally</a>
+      <div class="flex flex-wrap items-center justify-end gap-x-6 gap-y-2 text-sm text-neutral-600">
+        <a href="#education" class="hover:text-neutral-900 transition-colors">Education</a>
+        <a href="#experience" class="hover:text-neutral-900 transition-colors">Experience</a>
+        <a href="#projects" class="hover:text-neutral-900 transition-colors">Projects</a>
+        <a
+          href="mailto:sherinechally@gmail.com"
+          class="text-neutral-900 underline decoration-neutral-300 underline-offset-4 hover:decoration-neutral-900 transition-colors"
+          >Email</a
+        >
       </div>
-      
-      <div class="hidden md:flex items-center gap-8">
-        <a href="#home" class="text-gray-300 hover:text-white transition-colors font-mono text-sm">home()</a>
-        <a href="#about" class="text-gray-300 hover:text-white transition-colors font-mono text-sm">about()</a>
-        <a href="#experience" class="text-gray-300 hover:text-white transition-colors font-mono text-sm">experience()</a>
-        <a href="#projects" class="text-gray-300 hover:text-white transition-colors font-mono text-sm">projects()</a>
-      </div>
-      
-      <a href="mailto:sherinechally@gmail.com" class="px-6 py-2 rounded-lg border border-purple-500/50 bg-purple-500/10 hover:bg-purple-500/20 transition-all hover:shadow-glow-purple font-mono text-sm">
-        Connect
-      </a>
     </nav>
   </header>
 
-<section id="home" class="pt-32 pb-20 px-6 min-h-screen flex items-center relative z-10">
-    <div class="max-w-7xl mx-auto w-full">
-      <div class="grid lg:grid-cols-12 gap-12 items-center">
-        
-        <div class="lg:col-span-5 space-y-8">
-          <div class="space-y-2">
-            <p class="font-mono text-purple-400 text-sm mb-2">import {{ '{' }} Scalability, Security, ML {{ '}' }} from 'core-values';</p>
-            <h1 class="text-5xl md:text-7xl font-bold">
-              Sherine <br/>
-              <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-500 bg-clip-text text-transparent">
-                Chally
-              </span>
-            </h1>
-          </div>
-
-<div class="bg-black/40 border-l-4 border-purple-500 p-6 backdrop-blur-sm rounded-r-xl">
-  <p class="text-gray-300 text-lg leading-relaxed font-light">
-    I am a <span class="text-purple-400 font-semibold">Data Science graduate student at UCLA</span> 
-    and a former <span class="text-purple-400 font-semibold">Software Engineer II at Morgan Stanley</span>, 
-    where I modernized <span class="text-white font-medium">legacy mainframe architectures</span> 
-    and engineered <span class="text-white font-medium">secure distributed systems</span> in PostgreSQL. 
-    I operate at the intersection of <span class="text-purple-400 font-semibold">scalable data infrastructure, advanced ML, and Product Management</span>, 
-    with a current focus on mastering 
-    <span class="text-white font-medium">Snowflake, Databricks, and AWS</span>.
-  </p>
-</div>
-          <div class="flex flex-wrap gap-4 font-mono text-sm">
-            <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
-              <span class="text-green-400">●</span> <span class="text-gray-400">Latent:</span> High
-            </div>
-            <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
-              <span class="text-purple-400">●</span> <span class="text-gray-400">Scale:</span> Distributed
-            </div>
-            <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
-              <span class="text-pink-400">●</span> <span class="text-gray-400">Auth:</span> mTLS
-            </div>
-          </div>
-        </div>
-
-        <div class="hidden lg:block lg:col-span-7">
-  <div class="terminal-window bg-black/80 backdrop-blur-xl border border-purple-500/30 rounded-lg overflow-hidden shadow-2xl min-h-[420px]">
-    <div class="flex items-center gap-2 px-4 py-3 bg-gray-900/50 border-b border-gray-700">
-      <div class="flex gap-2">
-        <div class="w-3 h-3 rounded-full bg-red-500"></div>
-        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-        <div class="w-3 h-3 rounded-full bg-green-500"></div>
-      </div>
-      <span class="ml-4 text-xs text-gray-400 font-mono">~/portfolio/pipeline_manager</span>
-    </div>
-    
-    <div class="p-6 font-mono text-sm leading-relaxed">
-
-      
-      <div class="mt-6" *ngIf="showWhoamiResp">
-        <div class="text-green-400">$ <span class="text-white">{{ typedCat }}</span><span class="cursor" *ngIf="!showCatResp">_</span></div>
-        <div class="text-gray-400 mt-2 grid grid-cols-2 gap-x-8" *ngIf="showCatResp" @fadeIn>
-          <div>
-            <span class="text-purple-400">languages:</span><br/>
-            &nbsp;&nbsp;- Java, Python<br/>
-            &nbsp;&nbsp;- SQL, Angular
-          </div>
-          <div>
-            <span class="text-purple-400">infrastructure:</span><br/>
-            &nbsp;&nbsp;- Databricks, Snowflake<br/>
-            &nbsp;&nbsp;- PostgreSQL (mTLS)
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-6" *ngIf="showCatResp">
-        <div class="text-green-400">$ <span class="text-white">{{ typedLs }}</span><span class="cursor" *ngIf="!showLsResp">_</span></div>
-        <div class="text-gray-300 mt-2" *ngIf="showLsResp" @fadeIn>
-          <span class="text-pink-400">→ reflective_hybrid_RAG/</span><br/>
-          <span class="text-pink-400">→ neural_network_poisoning/</span>
-        </div>
-      </div>
-      
-      <div class="text-green-400 mt-6" *ngIf="isComplete">
-        $ <span class="cursor-blink">_</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Rest of your sections remain the same -->
-  <section id="about" class="py-20 px-6 relative z-10">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">
-          <span class="text-gray-400 font-mono">function</span> 
-          <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Education()</span>
-        </h2>
-      </div>
-      
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
-          <h3 class="text-xl font-bold text-white">University of California, Los Angeles (UCLA)</h3> 
-          <p class="text-purple-400 font-mono">M.Eng in Data Science | Expected Dec '26</p> 
-          <p class="text-gray-400 mt-2 text-sm italic">Large-Scale Machine Learning, Big Data Analytics, Product Management</p> 
-        </div>
-        <div class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
-          <h3 class="text-xl font-bold text-white">SRM Institute of Science and Technology</h3>
-          <p class="text-purple-400 font-mono">B.Tech in CS (Big Data Analytics) | GPA: 3.88/4.00</p>
-          <p class="text-gray-400 mt-2 text-sm italic">Machine Learning, Data Structures, DBMS, Operating Systems</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" class="py-20 px-6 relative z-10">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">
-          <span class="text-gray-400 font-mono">class</span> 
-          <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">ProfessionalJourney</span>
-        </h2>
-      </div>
-      
-      <div class="space-y-8">
-        <div class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-              <h3 class="text-xl font-bold mb-1">Software Engineer II</h3>
-              <p class="text-purple-400 font-mono text-sm">Morgan Stanley | Jan '24 - July '25</p>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Java</span>
-              <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">PostgreSQL</span>
-              <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Linux</span>
-              <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Autosys</span>
-            </div>
-          </div>
-          <ul class="text-gray-300 mt-4 space-y-2 list-disc list-inside">
-            <li>Modernized legacy mainframe systems using APIs, Datalinks, and Message Queues for enhanced scalability.</li>
-            <li>Secured PostgreSQL databases using Mutual TLS (mTLS) encryption, replacing Kerberos authentication.</li>
-          </ul>
-        </div>
-        
-        <div class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-              <h3 class="text-xl font-bold mb-1">Software Engineer I</h3>
-              <p class="text-purple-400 font-mono text-sm">Morgan Stanley | Jan '23 - Dec '23</p>
-            </div>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Angular</span>
-              <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Spring Boot</span>
-              <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">PostgreSQL</span>
-            </div>
-          </div>
-          <ul class="text-gray-300 mt-4 space-y-2 list-disc list-inside">
-            <li>Led migration of web applications from Angular 8 to 16, resolving legacy code hygiene issues.</li>
-            <li>Performed data forecasting analysis to support Prime Brokerage clients in loan conversions.</li>
-          </ul>
-        </div>
-
-        <div class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              <div>
-                <h3 class="text-xl font-bold mb-1">Technology Analyst</h3>
-                <p class="text-purple-400 font-mono text-sm">Morgan Stanley | Aug '22 - Dec '22</p>
-              </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Python</span>
-              <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Java</span>
-              <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">JavaScript</span>
-              <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">C#</span>
-              <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">C</span>
-              <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">C++</span>
-              <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Scala</span>
-            </div>
-            </div>
-            <ul class="text-gray-300 mt-4 space-y-2 list-disc list-inside">
-              <li>Developed an interactive market data simulator with live visualizations for trend analysis.</li>
-              <li>Created a secure UI for automated Bitbucket file management and user authentication.</li>
-            </ul>
-        </div>
-        <div class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              <div>
-                <h3 class="text-xl font-bold mb-1">Technology Spring Analyst Intern</h3>
-                <p class="text-purple-400 font-mono text-sm">Morgan Stanley | Jan '22 - July '22</p>
-              </div>
-              <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Angular</span>
-              <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Java</span>
-              <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">PostgreSQL</span>
-              <span class="px-3 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Kerberos</span>
-            </div>
-            </div>
-            <ul class="text-gray-300 mt-4 space-y-2 list-disc list-inside">
-              <li>Designed and developed secure web-based user interface for business users to facilitate quick and IT-independent modification of critical data points.</li>
-            </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="py-20 px-6 relative z-10">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">
-          <span class="text-gray-400 font-mono">const</span> 
-          <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">keyProjects</span>
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-purple-500/50 transition-all duration-500 hover:shadow-glow-purple project-card p-6">
-            <div class="flex justify-between items-start mb-4">
-                <h3 class="text-xl font-bold">Reflective Hybrid RAG</h3>
-                <span class="text-xs font-mono text-purple-400">GenAI / Search</span>
-            </div>
-            <p class="text-gray-400 text-sm mb-4">
-                Designed architecture using Gemini 2.5 Flash and Qdrant to improve recommendation accuracy by 3x. Combined Dense & Sparse (SPLADE) search.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Python</span>
-              <span class="px-2 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Qdrant</span>
-              <span class="px-2 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">LLMs</span>
-            </div>
-        </div>
-
-        <div class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-purple-500/50 transition-all duration-500 hover:shadow-glow-purple project-card p-6">
-            <div class="flex justify-between items-start mb-4">
-                <h3 class="text-xl font-bold">Neural Network Poisoning</h3>
-                <span class="text-xs font-mono text-purple-400">Security / ML</span>
-            </div>
-            <p class="text-gray-400 text-sm mb-4">
-                Designed attacks targeting pruned neural networks using PyTorch. Achieved 12% accuracy degradation while preserving unpruned performance.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">PyTorch</span>
-              <span class="px-2 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">CNNs</span>
-              <span class="px-2 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">U-Net</span>
-            </div>
-        </div>
-
-        <div class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-purple-500/50 transition-all duration-500 hover:shadow-glow-purple project-card p-6">
-            <h3 class="text-xl font-bold mb-2">Churn Behaviour Analysis</h3>
-            <p class="text-gray-400 text-sm mb-4">
-                Developed uplift modeling for 13M payment records to identify persuadable customers and prevent churn through data-driven intervention.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Python</span>
-              <span class="px-2 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Uplift Modeling</span>
-            </div>
-        </div>
-
-        <div class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-purple-500/50 transition-all duration-500 hover:shadow-glow-purple project-card p-6">
-            <h3 class="text-xl font-bold mb-2">Smart Security Door</h3>
-            <p class="text-gray-400 text-sm mb-4">
-                Facial recognition system using computer vision and encrypted access tokens for university laboratory access control.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">Computer Vision</span>
-              <span class="px-2 py-1 rounded bg-purple-500/10 text-xs text-purple-300 font-mono">AI</span>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="border-t border-white/10 py-12 px-6 mt-20 relative z-10">
-    <div class="max-w-7xl mx-auto text-center">
-      <div class="flex justify-center gap-6 mb-4">
-          <a href="https://github.com/sherinehannahchally" class="text-gray-400 hover:text-purple-400 font-mono text-xs">// GitHub</a> 
-          <a href="https://linkedin.com/in/sherine-chally-43396a178" class="text-gray-400 hover:text-purple-400 font-mono text-xs">// LinkedIn</a>
-          <a href="https://datascienceportfol.io/sherinechally" class="text-gray-400 hover:text-purple-400 font-mono text-xs">// Portfolio</a>
-      </div>
-      <p class="text-gray-400 font-mono text-sm">
-        Built by Sherine Hannah Chally
+  <main id="top" class="mx-auto max-w-3xl px-6 pb-24 pt-16 md:pt-20">
+    <section class="mb-20 md:mb-28" aria-labelledby="intro-heading">
+      <p class="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-neutral-500">Portfolio</p>
+      <h1 id="intro-heading" class="mb-6 text-4xl font-semibold tracking-tight text-neutral-900 md:text-5xl">
+        Sherine Chally
+      </h1>
+      <p class="mb-8 max-w-xl text-lg leading-relaxed text-neutral-600">
+        M.Eng Data Science student at UCLA. Former Software Engineer at Morgan Stanley, focused on scalable data
+        systems, machine learning, and product-minded engineering.
       </p>
-      <p class="text-gray-500 text-xs mt-2 font-mono">© 2026. Los Angeles, CA.</p>
-    </div>
-  </footer>
+      <p class="max-w-xl text-base leading-relaxed text-neutral-600">
+        I work at the intersection of <span class="text-neutral-900">data infrastructure</span>,
+        <span class="text-neutral-900">ML</span>, and <span class="text-neutral-900">secure distributed systems</span>.
+        Interests include Snowflake, Databricks, and AWS.
+      </p>
+    </section>
 
+    <section id="education" class="mb-20 scroll-mt-24 md:mb-28" aria-labelledby="education-heading">
+      <h2 id="education-heading" class="mb-8 border-b border-neutral-200 pb-2 text-xs font-semibold uppercase tracking-[0.15em] text-neutral-500">
+        Education
+      </h2>
+      <ul class="space-y-10">
+        <li>
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="font-medium text-neutral-900">University of California, Los Angeles</h3>
+            <span class="shrink-0 text-sm text-neutral-500">Expected Dec 2026</span>
+          </div>
+          <p class="mt-1 text-sm text-neutral-600">M.Eng in Data Science</p>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-500">
+            Coursework: Large-Scale Machine Learning, Big Data Analytics, Product Management
+          </p>
+        </li>
+        <li>
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="font-medium text-neutral-900">SRM Institute of Science and Technology</h3>
+            <span class="shrink-0 text-sm text-neutral-500">B.Tech, Computer Science (Big Data Analytics)</span>
+          </div>
+          <p class="mt-1 text-sm text-neutral-600">GPA 3.88 / 4.00</p>
+          <p class="mt-2 text-sm leading-relaxed text-neutral-500">
+            Machine Learning, Data Structures, DBMS, Operating Systems
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="experience" class="mb-20 scroll-mt-24 md:mb-28" aria-labelledby="experience-heading">
+      <h2 id="experience-heading" class="mb-8 border-b border-neutral-200 pb-2 text-xs font-semibold uppercase tracking-[0.15em] text-neutral-500">
+        Experience
+      </h2>
+      <ol class="relative space-y-12 border-l border-neutral-200 pl-6">
+        <li class="relative">
+          <span class="absolute -left-[25px] top-1.5 h-2 w-2 rounded-full bg-neutral-400" aria-hidden="true"></span>
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="font-medium text-neutral-900">Software Engineer II</h3>
+            <span class="shrink-0 text-sm tabular-nums text-neutral-500">Jan 2024 – Jul 2025</span>
+          </div>
+          <p class="mt-0.5 text-sm text-neutral-600">Morgan Stanley</p>
+          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed text-neutral-600">
+            <li>Modernized legacy mainframe systems using APIs, Datalinks, and message queues for scalability.</li>
+            <li>Secured PostgreSQL with mutual TLS (mTLS), replacing Kerberos authentication.</li>
+          </ul>
+          <p class="mt-4 text-xs text-neutral-500">Java · PostgreSQL · Linux · Autosys</p>
+        </li>
+        <li class="relative">
+          <span class="absolute -left-[25px] top-1.5 h-2 w-2 rounded-full bg-neutral-300" aria-hidden="true"></span>
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="font-medium text-neutral-900">Software Engineer I</h3>
+            <span class="shrink-0 text-sm tabular-nums text-neutral-500">Jan 2023 – Dec 2023</span>
+          </div>
+          <p class="mt-0.5 text-sm text-neutral-600">Morgan Stanley</p>
+          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed text-neutral-600">
+            <li>Led migration of web applications from Angular 8 to 16 and improved legacy code hygiene.</li>
+            <li>Data forecasting to support Prime Brokerage loan conversion workflows.</li>
+          </ul>
+          <p class="mt-4 text-xs text-neutral-500">Angular · Spring Boot · PostgreSQL</p>
+        </li>
+        <li class="relative">
+          <span class="absolute -left-[25px] top-1.5 h-2 w-2 rounded-full bg-neutral-300" aria-hidden="true"></span>
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="font-medium text-neutral-900">Technology Analyst</h3>
+            <span class="shrink-0 text-sm tabular-nums text-neutral-500">Aug 2022 – Dec 2022</span>
+          </div>
+          <p class="mt-0.5 text-sm text-neutral-600">Morgan Stanley</p>
+          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed text-neutral-600">
+            <li>Built an interactive market data simulator with live visualizations.</li>
+            <li>Shipped a secure UI for Bitbucket automation and user authentication.</li>
+          </ul>
+          <p class="mt-4 text-xs text-neutral-500">Python · Java · JavaScript · C# · C · C++ · Scala</p>
+        </li>
+        <li class="relative">
+          <span class="absolute -left-[25px] top-1.5 h-2 w-2 rounded-full bg-neutral-300" aria-hidden="true"></span>
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="font-medium text-neutral-900">Technology Spring Analyst Intern</h3>
+            <span class="shrink-0 text-sm tabular-nums text-neutral-500">Jan 2022 – Jul 2022</span>
+          </div>
+          <p class="mt-0.5 text-sm text-neutral-600">Morgan Stanley</p>
+          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed text-neutral-600">
+            <li>
+              Designed a secure web UI so business users could modify critical data without heavy IT dependency.
+            </li>
+          </ul>
+          <p class="mt-4 text-xs text-neutral-500">Angular · Java · PostgreSQL · Kerberos</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="projects" class="mb-20 scroll-mt-24 md:mb-28" aria-labelledby="projects-heading">
+      <h2 id="projects-heading" class="mb-8 border-b border-neutral-200 pb-2 text-xs font-semibold uppercase tracking-[0.15em] text-neutral-500">
+        Projects
+      </h2>
+      <ul class="divide-y divide-neutral-200">
+        <li class="py-8 first:pt-0">
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+            <h3 class="font-medium text-neutral-900">Reflective Hybrid RAG</h3>
+            <span class="shrink-0 text-xs text-neutral-500">GenAI · Search</span>
+          </div>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600">
+            Architecture with Gemini 2.5 Flash and Qdrant; combined dense and sparse (SPLADE) retrieval to improve
+            recommendation quality.
+          </p>
+          <p class="mt-3 text-xs text-neutral-500">Python · Qdrant · LLMs</p>
+        </li>
+        <li class="py-8">
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+            <h3 class="font-medium text-neutral-900">Neural Network Poisoning</h3>
+            <span class="shrink-0 text-xs text-neutral-500">Security · ML</span>
+          </div>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600">
+            Attacks on pruned networks in PyTorch; measured accuracy impact while preserving baseline behavior on
+            unpruned paths.
+          </p>
+          <p class="mt-3 text-xs text-neutral-500">PyTorch · CNNs · U-Net</p>
+        </li>
+        <li class="py-8">
+          <h3 class="font-medium text-neutral-900">Churn Behaviour Analysis</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600">
+            Uplift modeling on ~13M payment records to find persuadable customers and reduce churn.
+          </p>
+          <p class="mt-3 text-xs text-neutral-500">Python · Uplift modeling</p>
+        </li>
+        <li class="py-8 pb-0">
+          <h3 class="font-medium text-neutral-900">Smart Security Door</h3>
+          <p class="mt-3 text-sm leading-relaxed text-neutral-600">
+            Lab access control using computer vision and encrypted tokens.
+          </p>
+          <p class="mt-3 text-xs text-neutral-500">Computer vision · AI</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="border-t border-neutral-200 pt-12" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-neutral-500">
+        Contact
+      </h2>
+      <p class="mb-6 text-sm leading-relaxed text-neutral-600">
+        Open to roles in data engineering, ML engineering, and product-minded technical work.
+      </p>
+      <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+        <a
+          href="mailto:sherinechally@gmail.com"
+          class="text-neutral-900 underline decoration-neutral-300 underline-offset-4 hover:decoration-neutral-900"
+          >sherinechally@gmail.com</a
+        >
+        <a
+          href="https://github.com/sherinehannahchally"
+          class="text-neutral-600 hover:text-neutral-900 transition-colors"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+        <a
+          href="https://linkedin.com/in/sherine-chally-43396a178"
+          class="text-neutral-600 hover:text-neutral-900 transition-colors"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >
+        <a
+          href="https://datascienceportfol.io/sherinechally"
+          class="text-neutral-600 hover:text-neutral-900 transition-colors"
+          rel="noopener noreferrer"
+          >Writing</a
+        >
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-neutral-200 py-8">
+    <p class="text-center text-xs text-neutral-500">© 2026 Sherine Chally · Los Angeles, CA</p>
+  </footer>
 </div>
