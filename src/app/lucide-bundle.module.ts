@@ -15,6 +15,7 @@ import {
   Shield,
   Laptop,
   PenLine,
+  FileText,
 } from 'lucide-angular';
 
 @NgModule({
@@ -34,6 +35,7 @@ import {
       Shield,
       Laptop,
       PenLine,
+      FileText,
     }),
   ],
   exports: [LucideAngularModule],
